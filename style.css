@@ -1,97 +1,244 @@
+/*fontes utilizadas*/
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*para tirar borda automatica é necessario usar "" com margin e padding 0*/
 *{
  margin: 0;
  padding: 0;
 }
+
+/*fundo + cor da fonte e texto da pagina centralizados*/
 body{
     background-color: #0A192F;
     color: white;
     text-align: center;
 }
+
+/*centralizei o texto da header para melhor noção do espaçamento ao separar*/
 header{
     background-color: #4A5C6A;
     text-align: center;
 }
+
+/* cor da letra dos links presentes na área de navegação */
+/* 'em' mede o tamanho relativo à fonte do elemento que está "por fora" (pai), que é o elemento que envolve outro elemento dentro dele */
+/* textos presentes em links tiveram as fontes alteradas (google fonts) */
 a{
     color: #ffffff;
     margin: 0 1em;
+    font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
 
 }
+
+/* posição do titulo de primeiro nivel (meu nome no canto esquerdo)*/
 h1{
     text-align: left;
     margin: 20px;
 }
-.caixa1{
-    background-color: #0A192F;
-    text-align: left;
+
+/* justify-self: alinha um item dentro do seu próprio espaço na grade, podendo jogar ele para a esquerda, direita ou centro.
+ a "grade" é uma forma de organizar os elementos da página em linhas e colunas, como se fosse uma tabela invisível para alinhar melhor o conteúdo */
+#layout{
+    text-align: center;
     width: 900px;
     height: 250px;
     margin: 100px;
     margin-left: 190px;
+    margin-top: 200px;
     padding: 50px;
-    border: 30px;
-    font-size: 25px;
+    font-size: 30px;
+    justify-self: center;
 }
-.Sobre{
+
+/* border-radius = arredondar as bordas da caixa
+font-size = tamanho da fonte*/
+#Sobre{
     background-color: #4A5C6A;
     text-align: center;
-    width: 600px;
-    height: 300px;
+    width: 900px;
+    height: 400px;
     padding: 50px;
-    font-size: 20px;
+    font-size: 28px;
     border-radius: 15px;
     justify-self: center;
 
 }
+
+/* Display = define como o elemento será exibido na página (em bloco, em linha, etc...)
+   inline-block = faz o elemento ficar na mesma linha que os outros, mas permite ajustar largura e altura */
 .titulo_nav{
     display: inline-block;
-    margin-right:500px;
+    margin-right:300px;
 }
+
+
 .links_nav{
-    display: inline-block;
+    display: inline-block
 }
+
+/* aqui o h2 usa 5% da página e acrescente uma fonte para ele (peguei do google fonts) */
 h2{
     margin-bottom: 5%;
+    font-size: 30px;
+    font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
 }
-.card_habilidades{
-    background-color: #4A5C6A;
-    display: inline-block;
-    padding: 40px;
-    margin: 50px;
-    border-radius: 10px;
-    font-size: 20px;
-    text-align: left;
-}
-.Projetos{
+
+/*Aqui ficam os projetos que ja fizemos, não coloquei ainda porque esqueci quais eram para colocar KKKKKKKKKKKKKKK (só lembro do PetShop, mas não queria deixar só um porque fica estéticamente feio :3 */
+#Projetos{
     margin: 70px;
+    margin: 200px;
 }
+
+/* ajustei o tamanho da fonte*/
+#Projetos h2{
+    font-size: 35px;
+}
+
+/*id de uma tabela onde usei justify-self para centralizar*/
 #lg{
     justify-self: center;    
 
 }
-.Habilidades{
+
+#Habilidades{
     margin-top: 70px;
 }
-.Skills{
+
+#Skills{
     margin-top: 20px;
+    padding: 100px;
+    
 }
-.Contatos{
-    margin-top: 70px;
+
+#Contatos{
+    margin-top: 90px;
+
 }
+
 .redes{
     margin: 70px;
     
 }
+
+/* adicionei uma fonte ao rodapé e ajustei margem e cor */
 footer{
     margin: 50px;
     color: dimgray;
-}
-h3{
-    display: inline-block;
-    text-align: center;
-    margin-left: 155px;
-    margin-right: 110px;
+     font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
 .container{
-    display: flex;
-    flex-direction: column;
+    text-align: center;
+}
+
+/* vertical-align: top; = alinha o elemento à parte de cima do espaço em que ele está */
+.bloco{
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px;
+}
+
+.bloco h3{
+    margin-bottom: 15px;
+}
+
+/* display: inline-block; = elemento fica na mesma linha que outros, mas permite definir largura e altura */
+.card_habilidades{
+    background-color: #4A5C6A;
+    padding: 70px;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 25px;
+    display: inline-block;
+}
+
+/* mudei o tamanho do texto, tamanho da margem e adicionei uma fonte (google fonts) */
+#habilidade1{
+    margin-top: 100px;
+    font-size: 20px;
+     font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+/* alterei a fonte dos h3 da página (google fonts) e mudei o tamanho do texto */
+h3{
+    font-size: 30px;
+      font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* textos em tabelas também tiveram a fonte alterada (google fonts) */
+td{
+    font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+/* alterei a fonte dos textos em paragráfos (google fonts) */
+p{
+    font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+/* alterei a fonte dos h1 presentes na página (google fonts) */
+h1{
+    font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+/* vertical-align: middle; = alinha o elemento verticalmente ao meio em relação ao texto ou ao conteúdo ao lado.
+
+  vertical-align = controla o alinhamento vertical de um elemento em relação ao que está ao lado.
+  
+  middle = posiciona o elemento aproximadamente no meio da altura de conteúdo ao lado. */
+.texto, .imagem {
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+/* o texto ocupa 65% da página e esta localizado a esquerda */
+.texto{
+    width: 65%;
+    text-align: left;
+    margin-left: 3px;
+}
+
+/* tentei ajustar o tamanho da foto e arredondei ela com 50% de border-radius para conseguir centralizar a foto com o texto*/
+.imagem img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-left: 4px;
 }
