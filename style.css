@@ -19,10 +19,20 @@ body{
     text-align: center;
 }
 
-/*centralizei o texto da header para melhor noção do espaçamento ao separar*/
+/*centralizei o texto da header para melhor noção do espaçamento ao separar.
+fixei a barra de navegação no topo da página para que ela acompanhe o rolamento dela facilitando a navegação*/
 header{
     background-color: #4A5C6A;
     text-align: center;
+    position: sticky;
+    top: 0;
+    height: 80px;
+    width: 100%;
+}
+
+/*Para a barra de navegação não cobrir os titulos toda vez que eu ir para uma sessão, coloquei scroll-margin-top*/
+#layout, #Sobre, #habilidade1, #Projetos, #Skills, #Contatos{
+    scroll-margin-top: 150px;
 }
 
 /* cor da letra dos links presentes na área de navegação */
@@ -51,10 +61,14 @@ h1{
     height: 250px;
     margin: 100px;
     margin-left: 190px;
-    margin-top: 200px;
+    margin-bottom: 150px;
+    margin-top: 100px;
     padding: 50px;
-    font-size: 30px;
+    font-size: 28px;
     justify-self: center;
+}
+#contatar{
+    margin: 0px;
 }
 
 /* border-radius = arredondar as bordas da caixa
@@ -64,6 +78,8 @@ font-size = tamanho da fonte*/
     text-align: center;
     width: 900px;
     height: 400px;
+    margin-top: 100px;
+    margin-bottom: 100px;
     padding: 50px;
     font-size: 28px;
     border-radius: 15px;
@@ -94,14 +110,9 @@ h2{
   font-variation-settings: "wdth" 100;
 }
 
-/*Aqui ficam os projetos que ja fizemos, não coloquei ainda porque esqueci quais eram para colocar KKKKKKKKKKKKKKK (só lembro do PetShop, mas não queria deixar só um porque fica estéticamente feio :3 */
+/* ajustei o tamanho da fonte*/
 #Projetos{
     margin: 70px;
-    margin: 200px;
-}
-
-/* ajustei o tamanho da fonte*/
-#Projetos h2{
     font-size: 35px;
 }
 
@@ -112,7 +123,7 @@ h2{
 }
 
 #Habilidades{
-    margin-top: 70px;
+    margin-top: 20px;
 }
 
 #Skills{
@@ -150,7 +161,7 @@ footer{
 .bloco{
     display: inline-block;
     vertical-align: top;
-    margin: 20px;
+    margin: 10px;
 }
 
 .bloco h3{
@@ -169,7 +180,7 @@ footer{
 
 /* mudei o tamanho do texto, tamanho da margem e adicionei uma fonte (google fonts) */
 #habilidade1{
-    margin-top: 100px;
+    margin-top: 20px;
     font-size: 20px;
      font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
@@ -177,6 +188,13 @@ footer{
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
+}
+h4{
+    margin-top: 15px;
+    margin-left: 10px;
+    text-align: left;
+    font-size: 20px;
+    
 }
 
 /* alterei a fonte dos h3 da página (google fonts) e mudei o tamanho do texto */
@@ -242,21 +260,45 @@ h1{
     border-radius: 50%;
     margin-left: 4px;
 }
-#petshop{
-    background-color: #4A5C6A;
-    padding: 100px;
-    width: 60px;
-    border-radius: 10px;
-    text-align: justify;
-    font-size: 20px;
+.PetShop{
     display: inline-block;
-}
-#site{
-    background-color: #4A5C6A;
-    padding: 100px;
-    width: 60px;
-    border-radius: 10px;
+    border-radius: 15px;
+    background-color: #373738;
     text-align: center;
-    font-size: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    border: 5px solid black;
+    padding-bottom: 90px;
+    height: 370px;
+    width: 350px;
+}
+
+#descrição{
+    font-size: 14px;
+    text-align: left;
+    margin-top: 5px;
+    justify-self: center;
+    
+}
+#linguagens{
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+#tag{
+    background-color: #7d7c7c;
+    color: white;
     display: inline-block;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 8px 15px;
+    margin-top: 30px;
+    margin-right: 5px;
+}
+#as, .as{
+    display: flex;justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    text-align: left;
+    margin-top: 10px;
 }
